@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @font-face {
+        font-family: 'IBM Plex Sans Roman';
+        src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf');
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'IBM Plex Sans Roman', Times;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        background-color: #dcedc8;
+      }
+
+      h1 {
+        font-weight: 100;
+        font-size: 10vw;
+        line-height: 10vw;
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+      }
+
+      h1 .char {
+        animation: breathe 4000ms infinite both;
+      }
+
+      h1 .char:nth-child(2) {
+        animation-delay: calc(400ms);
+      }
+
+      h1 .char:nth-child(3) {
+        animation-delay: calc(800ms);
+      }
+
+      h1 .char:nth-child(4) {
+        animation-delay: calc(1200ms);
+      }
+
+      h1 .char:nth-child(5) {
+        animation-delay: calc(1600ms);
+      }
+
+      h1 .char:nth-child(6) {
+        animation-delay: calc(2000ms);
+      }
+      h1 .char:nth-child(7) {
+        animation-delay: calc(2400ms);
+      }
+      h1 .char:nth-child(8) {
+        animation-delay: calc(2800ms);
+      }
+      h1 .char:nth-child(9) {
+        animation-delay: calc(3200ms);
+      }
+
+      h1:hover span {
+        animation-play-state: paused;
+      }
+
+      @keyframes breathe {
+        0% {
+          font-variation-settings: 'wght' 100, 'wdth' 85;
+          font-size: 10vw;
+        }
+        60% {
+          font-variation-settings: 'wght' 700, 'wdth' 100;
+          font-size: 11vw;
+        }
+
+        100% {
+          font-variation-settings: 'wght' 100, 'wdth' 85;
+          font-size: 10vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 data-splitting>
+      <span class="char">B</span>
+      <span class="char">r</span>
+      <span class="char">e</span>
+      <span class="char">a</span>
+      <span class="char">t</span>
+      <span class="char">h</span>
+      <span class="char">i</span>
+      <span class="char">n</span>
+      <span class="char">g</span>
+    </h1>
+  </body>
+</html>
