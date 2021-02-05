@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'IBM Plex Sans Roman';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+}
+
+body {
+  font-family: 'IBM Plex Sans Roman', Times;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  background-color: yellow;
+}
+
+p {
+  color: chocolate;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 8em;
+}
+
+h2 {
+  background-color: brown;
+  color: white;
+}
+
+.fall-down.words {
+  -webkit-transform: rotateZ(-7deg);
+          transform: rotateZ(-7deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+.fall-down.words .char {
+  padding: 5px 45px;
+  -webkit-animation: slide-down 2s forwards cubic-bezier(0.09, 0.67, 0.12, 1.23);
+          animation: slide-down 2s forwards cubic-bezier(0.09, 0.67, 0.12, 1.23);
+  -webkit-animation-delay: calc(.5s + (.1s*var(--char-index)));
+          animation-delay: calc(.5s + (.1s*var(--char-index)));
+  /* Or use: .word  and -word-index to animate by words */
+  opacity: 0;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    background: black;
+    color: yellow;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    background: black;
+    color: yellow;
+  }
+}
+
+h2, p {
+  -webkit-transform: rotateZ(-7deg);
+          transform: rotateZ(-7deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-animation: fadeIn 1s linear 1.7s forwards;
+          animation: fadeIn 1s linear 1.7s forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
