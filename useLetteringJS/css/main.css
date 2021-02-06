@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #ca0e62;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letter {
+  color:#fff;
+  font-size: 6em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  transform: perspective(1000px) rotateX(35deg);
+}
+
+.letter .char1,
+.letter .char2,
+.letter .char3,
+.letter .char4,
+.letter .char5,
+.letter .char6,
+.letter .char7,
+.letter .char8,
+.letter .char9 {
+  display: inline-block;
+  padding: 0 10px;
+  transition: .5s;
+  /* text-shadow: 0 5px 2px rgba(0, 0, 0, 0.9); */
+  box-shadow: 10px 50px 20px rgba(0, 0, 0, 0.2);
+  filter: blur(.5px);
+}
+
+.letter .char1,
+.letter .char3,
+.letter .char5,
+.letter .char7,
+.letter .char9 {
+  background: red;
+  transform: skewY(-10deg);
+}
+
+.letter .char2,
+.letter .char4,
+.letter .char6,
+.letter .char8 {
+  background: black;
+  transform: skewY(10deg);
+}
+
+
+
+.letter:hover .char1,
+.letter:hover .char2,
+.letter:hover .char3,
+.letter:hover .char4,
+.letter:hover .char5,
+.letter:hover .char6,
+.letter:hover .char7,
+.letter:hover .char8,
+.letter:hover .char9 {
+  background: red;
+  transform: skewY(0deg);
+  filter: blur(0);
+  transition: 1s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.letter:hover {
+  transform: perspective(0px) rotateX(0deg);
+  transition: 1s;
+}
